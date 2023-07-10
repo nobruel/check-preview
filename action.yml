@@ -1,4 +1,4 @@
-name: 'check'
+name: 'check-preview-amplify'
 description: 'This action builds and deploys your AWS Amplify pull request preview'
 inputs:
   preview_amplify_url:
