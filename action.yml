@@ -1,0 +1,20 @@
+name: 'check'
+description: 'This action builds and deploys your AWS Amplify pull request preview'
+inputs:
+  preview_amplify_url:
+    description: 'GitHub branch name to deploy'
+    required: true
+  message:
+    description: 'send a message to the console'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.preview_amplify_url }}
+    - ${{ inputs.message }}
+
+branding:
+  icon: 'git-pull-request'
+  color: 'blue'
